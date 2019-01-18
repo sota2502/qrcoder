@@ -1,0 +1,22 @@
+html
+  head
+    link rel='stylesheet' href='/css/bootstrap.min.css' 
+    script src='/js/bootstrap.min.js'
+    title = 'QR Code'
+  body
+    .container
+       h1 = 'Generate Form'
+       form action='/generate' method='get'
+         .form-group.row
+           label.col-sm-2.col-form-label = 'SSID'
+           .col-sm-10
+             input.form-control name='ssid'
+         .form-group.row
+           label.col-sm-2.col-form-label = 'Type'
+           .col-sm-10
+             input.form-control name='type' value='WPA'
+         .form-group.row
+           label.col-sm-2.col-form-label = 'Pass Phrase'
+           .col-sm-10
+             input.form-control name='pass_phrase'
+         button.btn.btn-primary type='submit' = 'Submit'
