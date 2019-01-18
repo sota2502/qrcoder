@@ -12,5 +12,7 @@ COPY . $WORK_DIR
 WORKDIR $WORK_DIR
 
 RUN bundle install --path vendor/bundle
+RUN mkdir -p tmp/pids
+RUN mkdir log
 
 CMD bundle exec unicorn -c unicorn.rb -E development
